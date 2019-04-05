@@ -40,7 +40,8 @@ export default {
         if (valid) {
           checkUser(this.form).then(res => {
             if (res.meta.status === 200) {
-              // 成功转到Home 并且记录token
+              // 成功转到Home 并且记录token 保存username
+              this.$store.commit('setUserName', res.data.username)
               localStorage.setItem('mytoken', res.data.token)
               this.$router.push({name: 'Home'})
             } else {
