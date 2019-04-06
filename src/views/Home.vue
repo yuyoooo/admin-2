@@ -5,20 +5,20 @@
       <el-aside width="auto">
         <div class="logo"></div>
         <el-menu
-        default-active="2"
         class="el-menu-admin"
         :collapse="isCollapse"
+        :router='true'
         @open="handleOpen"
         @close="handleClose"
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b">
-          <el-submenu index="1">
+          <el-submenu index="">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>导航一</span>
             </template>
-              <el-menu-item index="1-4-1">
+              <el-menu-item index="/user">
                 <i class="el-icon-menu"></i>
                 <span slot="title">导航二</span>
               </el-menu-item>
